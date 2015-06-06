@@ -48,7 +48,7 @@ public class AboutSplitRules extends javax.swing.JDialog {
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("SepRules 1.0 Progaramado en Java Version 8.0\n\nCopyright (c) 2015\nDesarrollo de interfaz gráfica de SepRules: Merino Merino Jesús Fernando\nImplementación de algoritmo y análisis:\n\tJośe Luis Santiago López\n\tMerino Merino Jesús Fernando\n\nLa primera versión de SepRules permite extraer en  modo texto y separar\nlas reglas de árboles clasificadores. Generando archivo de texto con las\nreglas en una estructura de IF-THEN.\n\nBlog del autor: http://linuxgx.blogspot.mx/");
+        jTextArea1.setText("SepRules 1.0 Progaramado en Java Version 8.0\n\nCopyright (c) 2015\nDesarrollo de interfaz gráfica de SepRules: Merino Merino Jesús Fernando\nImplementación de algoritmo y análisis:\n\tJośe Luis Santiago López\n\tMerino Merino Jesús Fernando\n\nLa primera versión de SepRules permite extraer en  modo texto y separar\nlas reglas de árboles clasificadores. Generando archivo de texto con las\nreglas en una estructura de IF-THEN.\n\nSitio web del proyecto: https://github.com/jesusferm/SplitRules");
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Aceptar");

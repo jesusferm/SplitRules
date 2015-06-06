@@ -1,4 +1,4 @@
-/*
+/**
  * Clase: GUISplitRules.java
  * Descripción: Contiene la interfaz gráfica declarada para el programa de 
             separación de reglas. Los métodos que utiliza esta clases, están
@@ -207,7 +207,7 @@ public class GUISplitRules extends javax.swing.JFrame {
                 metodosUso.deleteFile(nomTemp);
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Por favor selccione un archivo.", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Abra un archivo antes de exportar reglas.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jMenExportRulesActionPerformed
 

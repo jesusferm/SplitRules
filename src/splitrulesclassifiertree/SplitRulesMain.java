@@ -1,4 +1,4 @@
-/*
+/**
  * Clase:SplitRulesMain.java
  * Clase principal que ejecuta la interfaz gráfica del programa de extractor
  *              de reglas de archivos generados por árboles clasificadores.
