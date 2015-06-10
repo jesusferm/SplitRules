@@ -71,7 +71,7 @@ public class ManualSplitRules extends javax.swing.JFrame {
         jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setText("Para exportar las reglas del archivo abierto, ir al menú Archivo en la opción Exportar\nreglas reglas.\nAntes de exportar las reglas, es necesario abrir un archivo, de otro modo el\nSplitRules mostrará un error al intentar exportar las reglas.");
+        jTextArea2.setText("Para exportar las reglas del archivo abierto, ir al menú Archivo en la opción Exportar\nreglas.\nAntes de exportar las reglas, es necesario abrir un archivo, de otro modo el\nSplitRules mostrará un error al intentar exportar las reglas.");
         jScrollPane2.setViewportView(jTextArea2);
 
         jTextArea3.setEditable(false);
@@ -87,7 +87,7 @@ public class ManualSplitRules extends javax.swing.JFrame {
         jTextArea4.setEditable(false);
         jTextArea4.setColumns(20);
         jTextArea4.setRows(5);
-        jTextArea4.setText("1.-  EL mensaje \"Por favor selccione un archivo.\" se\n      muestra cuando se intenta exportar las reglas\n      sin abrir previamente un archivo.\n2.- El mensaje de erro \"El archivo no contiene\n     resultado de un algoritmo clasificador.\" se\n     muestra cuando el archivo abierto no contiene\n     fragmentos de reglas a separar.");
+        jTextArea4.setText("1.-  EL mensaje \"Por favor selccione un archivo.\" se\n      muestra cuando se intenta exportar las reglas\n      sin abrir previamente un archivo.\n2.- El mensaje de erro \"El archivo no la estructura\n     de un árbol clasificador.\" se muestra cuando el\n     archivo que se desea abrir no contiene reglas\n     que sean posibles de separar.");
         jScrollPane4.setViewportView(jTextArea4);
 
         jbtClose.setText("Cerrar");

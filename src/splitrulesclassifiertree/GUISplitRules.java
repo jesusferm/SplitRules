@@ -187,7 +187,7 @@ public class GUISplitRules extends javax.swing.JFrame {
                 jlbNameFileOpen.setText("Archivo abierto: "+pathFileOpen);
                 metodosUso.addTextToJTextArea(jtxtAreaTreeClass, pathFileOpen);
             }else{
-                JOptionPane.showMessageDialog(null, "El archivo no contiene resultado de un algoritmo clasificador.", "Archivo erróneo", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "El archivo no contiene la estructura de un árbol clasificador.", "Archivo erróneo", JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_jMenOpenFileActionPerformed
