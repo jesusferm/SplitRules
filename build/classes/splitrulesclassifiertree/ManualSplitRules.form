@@ -162,7 +162,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Para exportar las reglas del archivo abierto, ir al men&#xfa; Archivo en la opci&#xf3;n Exportar&#xa;reglas reglas.&#xa;Antes de exportar las reglas, es necesario abrir un archivo, de otro modo el&#xa;SplitRules mostrar&#xe1; un error al intentar exportar las reglas."/>
+                <Property name="text" type="java.lang.String" value="Para exportar las reglas del archivo abierto, ir al men&#xfa; Archivo en la opci&#xf3;n Exportar&#xa;reglas.&#xa;Antes de exportar las reglas, es necesario abrir un archivo, de otro modo el&#xa;SplitRules mostrar&#xe1; un error al intentar exportar las reglas."/>
               </Properties>
             </Component>
           </SubComponents>
@@ -206,7 +206,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="1.-  EL mensaje &quot;Por favor selccione un archivo.&quot; se&#xa;      muestra cuando se intenta exportar las reglas&#xa;      sin abrir previamente un archivo.&#xa;2.- El mensaje de erro &quot;El archivo no contiene&#xa;     resultado de un algoritmo clasificador.&quot; se&#xa;     muestra cuando el archivo abierto no contiene&#xa;     fragmentos de reglas a separar."/>
+                <Property name="text" type="java.lang.String" value="1.-  EL mensaje &quot;Por favor selccione un archivo.&quot; se&#xa;      muestra cuando se intenta exportar las reglas&#xa;      sin abrir previamente un archivo.&#xa;2.- El mensaje de erro &quot;El archivo no la estructura&#xa;     de un &#xe1;rbol clasificador.&quot; se muestra cuando el&#xa;     archivo que se desea abrir no contiene reglas&#xa;     que sean posibles de separar."/>
               </Properties>
             </Component>
           </SubComponents>

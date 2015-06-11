@@ -623,7 +623,7 @@ public class MethodsSplitRules {
             //SE ESCRIBE UN TÍTULO DENTRO DEL ARCHIVO
             pw.println("== Run Information ==\n" + "Rules get from file: "+pathFileOpen+"\n" 
                     + "Num of rules: "+getNumberRules(signoTerminal, longitud));
-            pw.println("\n*** Set of conditions \n");
+            pw.println("\n*** Set of conditions ***\n");
             //RECORRE EL ARREGLO signoTerminal[i]
             for(int i=0; i<longitud; i++){
                 //VERIFICA SI EXISTE UN SIGNO TERMINAL ")"
@@ -642,10 +642,10 @@ public class MethodsSplitRules {
                         //POSICIÓN SERA EL PADRE DE DICHA CONDICIÓN
                         nivelCondition = nivel[i]-1;
                         //CONCATENA LA CADENA CON LA CLASE OBTENIDA DEL METODO getClase
-                        condicion="\nTHEN \n\t"+getClase(cadena[i]);
+                        condicion="\nTHEN "+getClase(cadena[i]+"\n\n");
                         //CONCATENA LA CADENA CON LA CONDICION OBTENIDA DEL METODO getCondicion
                         //LA CUAL SEPARA LA CLASE DE LA CONDICIÓN A PARTIR DE  ":"
-                        condicion="\tAND "+getCondicion(cadena[i])+condicion;
+                        condicion=" AND \n"+getCondicion(cadena[i])+condicion;
                         //EN ESTE CICLO SE REALIZA EL RETROCESO DEL ARREGLO nivel
                         //DONDE SE BUSCA EL PADRE DE CADA CONDICIÓN
                         for(int j=i; j>=0 && band!=true; j--){
@@ -655,17 +655,17 @@ public class MethodsSplitRules {
                                 band=true;
                                 //AÑADE "IF", LA CONDICION RAIZ Y EL CONTENIDO ANTERIOR DE 
                                 //LA VARIABLE condicion
-                                condicion="R"+rule+": \n"+"IF "+cadena[j]+"\n"+condicion;
+                                condicion="R"+rule+": "+"IF \n"+cadena[j]+condicion;
                                 //IMPRIME TODA LA CONDICIÓN GENERADA
                                 //ALMACENA LA CONDICIÓN DENTRO DEL ARCHIVO
-                                pw.println(condicion+"\n");
+                                pw.println(condicion);
                             }else{
                                 //SI EL NIVEL AUN NO ES 0, ENTONCES SE VERIFICA SI LA POSICIÓN
                                 //j, DEL ARRAY NIVEL, COINCIDE CON EL NIVEL (PADRE DE LA CONDICIÓN ACTUAL)
                                 if(nivel[j]==nivelCondition){
                                     //SI COINCIDE, ENTONCES SE AÑADE "AND" Y EL CONTENIDO DE
                                     //LA VARIABLE DE TIPO STRING condicion
-                                    condicion="\tAND "+cadena[j]+"\n"+condicion;
+                                    condicion=" AND \n"+cadena[j]+condicion;
                                     //SE DECREMENTA EN 1 EL NIVEL QUE REPRESENTA AL PADRE DE 
                                     //LA CONDICION ACTUAL
                                     nivelCondition=nivelCondition-1;

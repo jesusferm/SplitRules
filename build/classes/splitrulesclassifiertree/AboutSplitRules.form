@@ -104,7 +104,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="SepRules 1.0 Progaramado en Java Version 8.0&#xa;&#xa;Copyright (c) 2015&#xa;Desarrollo de interfaz gr&#xe1;fica de SepRules: Merino Merino Jes&#xfa;s Fernando&#xa;Implementaci&#xf3;n de algoritmo y an&#xe1;lisis:&#xa;&#x9;Jo&#x15b;e Luis Santiago L&#xf3;pez&#xa;&#x9;Merino Merino Jes&#xfa;s Fernando&#xa;&#xa;La primera versi&#xf3;n de SepRules permite extraer en  modo texto y separar&#xa;las reglas de &#xe1;rboles clasificadores. Generando archivo de texto con las&#xa;reglas en una estructura de IF-THEN.&#xa;&#xa;Sitio web del proyecto: https://github.com/jesusferm/SplitRules"/>
+                <Property name="text" type="java.lang.String" value="SplitRules 1.0 fue Progaramado en Java Version 8.0&#xa;Copyright (c) 2015&#xa;Desarrollo de interfaz gr&#xe1;fica de SepRules: Merino Merino Jes&#xfa;s Fernando&#xa;Implementaci&#xf3;n de algoritmo:&#xa;&#x9;Jo&#x15b;e Luis Santiago L&#xf3;pez&#xa;&#x9;Merino Merino Jes&#xfa;s Fernando&#xa;La primera versi&#xf3;n de SepRules permite extraer en  modo texto y separar&#xa;las reglas de &#xe1;rboles clasificadores almacenandolos en un archivo de texto&#xa;plano. El archivo de texto generado contiene la reglas en un estructura de&#xa; IF-THEN.&#xa;&#xa;Sitio web del proyecto: https://github.com/jesusferm/SplitRules"/>
               </Properties>
             </Component>
           </SubComponents>
