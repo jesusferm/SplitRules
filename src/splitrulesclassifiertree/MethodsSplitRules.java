@@ -735,8 +735,15 @@ public class MethodsSplitRules {
     public String getClase(String cadena){
         String clase="";
         boolean band=false;
+        boolean bandCp = true;
         for(int i=0; i<cadena.length(); i++){
-            if(band==true){
+            if(cadena.charAt(i)=='.'){
+                bandCp = false;
+            }
+            if(cadena.charAt(i)=='/' || cadena.charAt(i)==')' ){
+                bandCp = true;
+            }
+            if(band==true && bandCp){
                 clase=clase+cadena.charAt(i);
             }
             if(cadena.charAt(i)==':'){
