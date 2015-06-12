@@ -740,8 +740,9 @@ public class MethodsSplitRules {
             String antCad = cadena.substring(getPosCharacter(cadena, ":")+1, getPosCharacter(cadena, "(")+1);
             String contCad = cadena.substring(getPosCharacter(cadena, "(")+1, cadena.length()-3);
             double entero = Double.parseDouble(contCad);
-            int ent = (int) entero;
+            int ent = (int) getCifraRedon(entero, 1);
             clase = antCad + Integer.toString(ent) + ")";
+            System.out.println("Clase: "+clase);
         }else{
             String antCad = cadena.substring(getPosCharacter(cadena, ":")+1, getPosCharacter(cadena, "(")+1);
             String priNum = cadena.substring(getPosCharacter(cadena, "(")+1, getPosCharacter(cadena, "/"));
@@ -749,11 +750,10 @@ public class MethodsSplitRules {
             
             double num1 = Double.parseDouble(priNum);
             double num2 = Double.parseDouble(segNum);
-            int nu1 = (int) num1;
-            int nu2 = (int) num2;
+            
+            clase = antCad+Integer.toString(getConvDouToInt(getCifraRedon(num1, 1)))+"/"+Integer.toString(getConvDouToInt(getCifraRedon(num2, 1)))+")";
             
             System.out.println("Numero redondeado a cero decimales : "+getCifraRedon(num1, 1) + "/" +getCifraRedon(num2, 1));
-            clase = antCad+Integer.toString(nu1)+"/"+Integer.toString(nu2)+")";
         }
         
         /*
