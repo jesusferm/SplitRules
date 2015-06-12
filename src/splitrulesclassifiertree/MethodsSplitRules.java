@@ -736,20 +736,27 @@ public class MethodsSplitRules {
         String clase="";
         boolean band=false;
         boolean bandCp = true;
-        for(int i=0; i<cadena.length(); i++){
+        for(int i=getPositionTwoPoint(cadena)+1; i<cadena.length(); i++){
             if(cadena.charAt(i)=='.'){
                 bandCp = false;
             }
             if(cadena.charAt(i)=='/' || cadena.charAt(i)==')' ){
                 bandCp = true;
             }
-            if(band==true && bandCp){
+            if(bandCp){
                 clase=clase+cadena.charAt(i);
-            }
-            if(cadena.charAt(i)==':'){
-                band=true;
             }
         }
         return clase;
+    }
+    
+    public int getPositionTwoPoint(String cadena){
+        int i;
+        for(i=0;i<cadena.length();i++){
+            if(cadena.charAt(i)==':'){
+                break;
+            }
+        }
+        return i;
     }
 }
