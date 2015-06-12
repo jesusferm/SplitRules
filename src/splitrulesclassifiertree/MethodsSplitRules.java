@@ -734,9 +734,30 @@ public class MethodsSplitRules {
      */
     public String getClase(String cadena){
         String clase="";
-        boolean band=false;
         boolean bandCp = true;
-        for(int i=getPositionTwoPoint(cadena)+1; i<cadena.length(); i++){
+        //+(2.56)
+        if(getPosCharacter(cadena, "/")==-1){
+            String antCad = cadena.substring(getPosCharacter(cadena, ":")+1, getPosCharacter(cadena, "(")+1);
+            String contCad = cadena.substring(getPosCharacter(cadena, "(")+1, cadena.length()-3);
+            double entero = Double.parseDouble(contCad);
+            int ent = (int) entero;
+            clase = antCad + Integer.toString(ent) + ")";
+        }else{
+            String antCad = cadena.substring(getPosCharacter(cadena, ":")+1, getPosCharacter(cadena, "(")+1);
+            String priNum = cadena.substring(getPosCharacter(cadena, "(")+1, getPosCharacter(cadena, "/"));
+            String segNum = cadena.substring(getPosCharacter(cadena, "/")+1, cadena.length()-3);
+            
+            double num1 = Double.parseDouble(priNum);
+            double num2 = Double.parseDouble(segNum);
+            int nu1 = (int) num1;
+            int nu2 = (int) num2;
+            
+            clase = antCad+Integer.toString(nu1)+Integer.toString(nu2)+")";
+            System.out.println("clasefinal: "+clase);
+        }
+        
+        /*
+        for(int i=0; i<cadena.length(); i++){
             if(cadena.charAt(i)=='.'){
                 bandCp = false;
             }
@@ -746,17 +767,18 @@ public class MethodsSplitRules {
             if(bandCp){
                 clase=clase+cadena.charAt(i);
             }
-        }
+        }*/
         return clase;
     }
     
-    public int getPositionTwoPoint(String cadena){
-        int i;
+    public int getPosCharacter(String cadena, String sim){
+        int i, pos=-1;
         for(i=0;i<cadena.length();i++){
-            if(cadena.charAt(i)==':'){
+            if(cadena.charAt(i)==sim.charAt(0)){
+                pos = i;
                 break;
             }
         }
-        return i;
+        return pos;
     }
 }
