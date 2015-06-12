@@ -645,7 +645,7 @@ public class MethodsSplitRules {
                         condicion="\nTHEN "+getClase(cadena[i]+"\n\n");
                         //CONCATENA LA CADENA CON LA CONDICION OBTENIDA DEL METODO getCondicion
                         //LA CUAL SEPARA LA CLASE DE LA CONDICIÓN A PARTIR DE  ":"
-                        condicion=" AND \n"+getCondicion(cadena[i])+condicion;
+                        condicion=" AND \n"+getCondicion(cadena[i])+condicion +"\n";
                         //EN ESTE CICLO SE REALIZA EL RETROCESO DEL ARREGLO nivel
                         //DONDE SE BUSCA EL PADRE DE CADA CONDICIÓN
                         for(int j=i; j>=0 && band!=true; j--){
@@ -752,8 +752,8 @@ public class MethodsSplitRules {
             int nu1 = (int) num1;
             int nu2 = (int) num2;
             
+            System.out.println("Numero redondeado a cero decimales : "+getCifraRedon(num1, 1) + "/" +getCifraRedon(num2, 1));
             clase = antCad+Integer.toString(nu1)+"/"+Integer.toString(nu2)+")";
-            System.out.println("clasefinal: "+clase);
         }
         
         /*
@@ -769,6 +769,15 @@ public class MethodsSplitRules {
             }
         }*/
         return clase;
+    }
+    
+    public int getConvDouToInt(double numero){
+        return (int) numero;
+    }
+    
+    public double getCifraRedon(double numero, int deciRed){
+        int cifras=(int) Math.pow(10,0);
+        return  Math.rint(numero*cifras)/cifras;
     }
     
     public int getPosCharacter(String cadena, String sim){
