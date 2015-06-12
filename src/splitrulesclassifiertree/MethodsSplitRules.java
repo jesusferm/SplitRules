@@ -752,7 +752,7 @@ public class MethodsSplitRules {
             int nu1 = (int) num1;
             int nu2 = (int) num2;
             
-            clase = antCad+Integer.toString(nu1)+Integer.toString(nu2)+")";
+            clase = antCad+Integer.toString(nu1)+"/"+Integer.toString(nu2)+")";
             System.out.println("clasefinal: "+clase);
         }
         
