@@ -633,47 +633,7 @@ public class MethodsSplitRules {
                     //SI LA POSICIÓN i DEL VECTOR SIGNO ")" ES 0
                     //QUIERE DECIR QUE NO SE HA HECHO LA CONDICIÓN
                     if(control[i]!=1){
-                        //INCREMENTA EN 1 EL NÚMERO DE REGLA
-                        rule++;
-                        //CAMBIA A UNO LA POSICION i DEL VECTOR CONTROL
-                        //PARA DAR A CONOCER QUE LA CONDICION HA SIDO REALIZADA ANTERIORMENTE
-                        control[i]=1;
-                        //RESTA 1 AL NIVEL DE DONDE SE ENCONTRO EL SIGNO ")" Y ESTA NUEVA
-                        //POSICIÓN SERA EL PADRE DE DICHA CONDICIÓN
-                        nivelCondition = nivel[i]-1;
-                        //CONCATENA LA CADENA CON LA CLASE OBTENIDA DEL METODO getClase
-                        condicion="\nTHEN "+getClase(cadena[i]+"\n\n");
-                        //CONCATENA LA CADENA CON LA CONDICION OBTENIDA DEL METODO getCondicion
-                        //LA CUAL SEPARA LA CLASE DE LA CONDICIÓN A PARTIR DE  ":"
-                        condicion=" AND \n"+getCondicion(cadena[i])+condicion +"\n";
-                        //EN ESTE CICLO SE REALIZA EL RETROCESO DEL ARREGLO nivel
-                        //DONDE SE BUSCA EL PADRE DE CADA CONDICIÓN
-                        for(int j=i; j>=0 && band!=true; j--){
-                            //SI EL NIVEL ES IGUAL A 0, QUIERE DECIR QUE SE A LLEGADO A LA RAIZ
-                            if(nivel[j]==0){
-                                //SI LA BANDERA ES TRUE, ENTONCES SE TERMINA EL CICLO FOR
-                                band=true;
-                                //AÑADE "IF", LA CONDICION RAIZ Y EL CONTENIDO ANTERIOR DE 
-                                //LA VARIABLE condicion
-                                condicion="R"+rule+": "+"IF \n"+cadena[j]+condicion;
-                                //IMPRIME TODA LA CONDICIÓN GENERADA
-                                //ALMACENA LA CONDICIÓN DENTRO DEL ARCHIVO
-                                pw.println(condicion);
-                            }else{
-                                //SI EL NIVEL AUN NO ES 0, ENTONCES SE VERIFICA SI LA POSICIÓN
-                                //j, DEL ARRAY NIVEL, COINCIDE CON EL NIVEL (PADRE DE LA CONDICIÓN ACTUAL)
-                                if(nivel[j]==nivelCondition){
-                                    //SI COINCIDE, ENTONCES SE AÑADE "AND" Y EL CONTENIDO DE
-                                    //LA VARIABLE DE TIPO STRING condicion
-                                    condicion=" AND \n"+cadena[j]+condicion;
-                                    //SE DECREMENTA EN 1 EL NIVEL QUE REPRESENTA AL PADRE DE 
-                                    //LA CONDICION ACTUAL
-                                    nivelCondition=nivelCondition-1;
-                                }
-                            }
-                        }
-                        //REINICIALIZA LA VARIABLE BAND EN FALSE, PARA LA SIGUIENTE CONDICIÓN
-                        band=false;
+                        //En proceso de actualización
                     }
                 }
             }
